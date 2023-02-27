@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block body %}
+<div class="container">
+    <div class="row">
+     <div class="col-md-4">
+        <img src="{{car.img.url}}" width="300" height="300">
+     </div>
+        <div class="col-md-6">
+  <h6>{{car.name}}</h6>
+ <h4> {{car.desc}}</h4>
+ <h6> {{car.year}}</h6>
+  <a class="btn btn-warning"href="{%url 'tatacars:update' car.id%}">update</a>
+  <a class="btn btn-danger"href="{%url 'tatacars:delete' car.id%}">delete</a>
+ </div>
+
+
+
+   </div>
+
+</div>
+
+{% endblock %}
